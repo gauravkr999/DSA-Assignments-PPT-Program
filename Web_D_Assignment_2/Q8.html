@@ -1,0 +1,39 @@
+<!-- Q.8 Difference between absolute and relative and sticky and fixed position explain with example. -->
+
+
+<!-- 
+Absolute Position vs. Relative Position:
+- Absolute position: When an element is positioned absolutely, it is taken out of the normal flow of the document and positioned relative to its closest positioned ancestor or to the document itself. This means that it won't affect the position of other elements on the page. You can specify the exact position of the element using properties like top, bottom, left, and right. For example: -->
+
+```html
+<div style="position: absolute; top: 50px; left: 50px;">
+  This div is positioned absolutely.
+</div>
+```
+
+<!-- - Relative position: When an element is positioned relatively, it is still in the normal flow of the document, but its position can be adjusted relative to its normal position. Other elements on the page will be positioned as if the relative element still took up its original space. It can be moved using properties like top, bottom, left, and right. For example: -->
+
+```html
+<div style="position: relative; top: 50px; left: 50px;">
+  This div is positioned relatively.
+</div>
+```
+
+<!-- Sticky Position vs. Fixed Position:
+- Sticky position: The sticky position is a combination of relative and fixed positioning. An element with a sticky position is treated as relatively positioned within its container until a specified offset threshold is met. Once the threshold is reached during scrolling, it behaves like a fixed position element, sticking to a specific location on the page. For example: -->
+
+```html
+<div style="position: sticky; top: 20px;">
+  This div has a sticky position.
+</div>
+```
+
+<!-- - Fixed position: When an element is positioned fixed, it is taken out of the normal flow of the document and positioned relative to the viewport, which means it will always stay in the same position, even if the page is scrolled. It remains fixed regardless of scrolling or other layout changes. For example: -->
+
+```html
+<div style="position: fixed; top: 20px; left: 20px;">
+  This div has a fixed position.
+</div>
+```
+<!-- 
+Absolute and relative positions affect the position of an element within the document flow, while sticky and fixed positions take the element out of the normal flow and keep it in a specific position. Sticky elements behave like relative elements until a specified threshold is reached, after which they become fixed in place, while fixed elements remain fixed regardless of scrolling or layout changes. -->

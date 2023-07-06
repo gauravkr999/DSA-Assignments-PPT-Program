@@ -1,0 +1,28 @@
+<!-- Q.5 How is Border-box different from Content Box? -->
+
+
+<!-- The concepts of "border-box" and "content-box" refer to different box-sizing models in CSS, which determine how the total width and height of an element are calculated, including its content, padding, and border. Here's the difference between the two:
+
+1. Content-box (default behavior):
+   - In the content-box model, the width and height of an element are calculated based on its content size only, excluding any padding or border.
+   - The specified width and height values apply only to the content area, and any padding or border added to the element increases its total width and height.
+   - For example, if you set an element's width to 200 pixels and add 10 pixels of padding and a 2-pixel border, the total width of the element would be 224 pixels (200px content width + 10px padding on each side + 2px border on each side).
+
+2. Border-box:
+   - In the border-box model, the width and height of an element are calculated to include the content, padding, and border together.
+   - The specified width and height values now represent the total dimensions of the element, including its content, padding, and border.
+   - For example, if you set an element's width to 200 pixels and add 10 pixels of padding and a 2-pixel border, the total width of the element would remain 200 pixels, as the padding and border are included within that specified width.
+
+To explicitly set the box-sizing model, you can use the CSS `box-sizing` property. For example:
+
+```css
+.element {
+  box-sizing: content-box; /* default behavior */
+}
+
+.element {
+  box-sizing: border-box;
+}
+```
+
+Using the border-box model can simplify layout calculations, as it ensures that the specified dimensions of an element remain constant regardless of added padding or border. This can be particularly useful when designing responsive layouts or dealing with complex nested elements. -->
