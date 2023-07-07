@@ -1,0 +1,55 @@
+<!-- Q.5 What is the purpose of the orientation media feature? -->
+
+
+
+<!-- The purpose of the orientation media feature is to target and apply specific styles based on the orientation of the device or viewport. It allows you to adjust the layout and presentation of your webpage based on whether the device is in portrait or landscape orientation.
+
+The orientation media feature provides two possible values:
+
+- `portrait`: This value represents a vertical or portrait orientation, where the height of the viewport is greater than its width.
+- `landscape`: This value represents a horizontal or landscape orientation, where the width of the viewport is greater than its height.
+
+By using the orientation media feature in media queries, you can apply different CSS rules or layout adjustments based on the orientation of the device. This can be particularly useful for optimizing the display of content, images, or user interfaces that may require different arrangements or proportions depending on the orientation.
+
+Here's an example of how the orientation media feature can be used:
+
+```css
+@media (orientation: landscape) {
+  /* CSS rules for landscape orientation */
+  
+  .header {
+    display: none;
+  }
+  
+  .content {
+    width: 80%;
+    float: left;
+  }
+  
+  .sidebar {
+    width: 20%;
+    float: right;
+  }
+}
+
+@media (orientation: portrait) {
+  /* CSS rules for portrait orientation */
+  
+  .header {
+    display: block;
+  }
+  
+  .content {
+    width: 100%;
+    float: none;
+  }
+  
+  .sidebar {
+    display: none;
+  }
+}
+```
+
+In this example, the media queries target the orientation of the device. When in landscape orientation, the CSS rules within the first media query block will apply. It hides the header, adjusts the width and floating behavior of the content and sidebar to create a side-by-side layout. Conversely, when in portrait orientation, the CSS rules within the second media query block will apply, showing the header, modifying the width and floating behavior to stack the content vertically, and hiding the sidebar.
+
+By utilizing the orientation media feature, you can design and optimize your webpage's layout to provide a better user experience based on whether the device is in portrait or landscape orientation. -->

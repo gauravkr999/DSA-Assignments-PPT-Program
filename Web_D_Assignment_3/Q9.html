@@ -1,0 +1,93 @@
+ <!-- Here are the steps you can follow:
+
+1. Set up the basic HTML structure of your webpage by creating an HTML file and adding the necessary HTML tags (`<!DOCTYPE html>`, `<html>`, `<head>`, and `<body>`).
+
+2. In the `<head>` section, link the necessary CSS file using the `<link>` tag, or you can include the CSS code directly within `<style>` tags.
+
+3. Inside the `<body>` section, create a `<footer>` element to serve as the container for your footer.
+
+4. Within the footer container, add the necessary content such as navigation links, copyright information, social media icons, etc., based on the design shown in the attached image.
+
+5. Apply CSS styles to create the desired appearance for the footer. Use appropriate CSS properties to control the layout, typography, colors, and spacing.
+
+6. Use CSS media queries to make the footer responsive and adapt to different screen sizes. Define breakpoints where the layout or styles need to change to ensure optimal visibility and alignment. Adjust the styles within the media queries to achieve the desired responsive behavior.
+
+Here's an example of the HTML structure and CSS code to get you started: -->
+
+<!-- HTML:
+```html -->
+<footer>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+  <p>&copy; 2023 Your Company. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
+```
+
+CSS:
+```css
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icons a {
+  color: #ffffff;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.social-icons i {
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  nav {
+    flex: 1 0 auto;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    flex: 1 0 100%;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    flex: 1 0 100%;
+    text-align: right;
+  }
+}
+```
+
+/* In this example, the footer is styled with a dark background color (`#333333`), white text color (`#ffffff`), and 20 pixels of padding. The navigation links (`<a>` tags) and social media icons are styled accordingly. Within the media query targeting screens with a minimum width of 768 pixels, the layout is adjusted using flexbox. The navigation links, copyright text, and social icons are displayed in a flexible row layout with appropriate alignments and margins.
+
+Please note that the CSS code provided is a starting point, and you may need to adjust the styles, colors, fonts, and layout based on your specific design requirements.
+
+Remember to incorporate these styles into your existing CSS file or create a separate file and link it in your HTML.
+
+By utilizing CSS and media queries, you can create a responsive footer that adapts to different screen sizes, ensuring optimal visibility and alignment of the content, as depicted in the attached image. */

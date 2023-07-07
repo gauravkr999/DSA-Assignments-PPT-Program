@@ -1,0 +1,79 @@
+<!-- To create a student dashboard page with a responsive student details table that adapts to different screen sizes, you can follow these steps:
+
+1. Set up the basic HTML structure of your webpage by creating an HTML file and adding the necessary HTML tags (`<!DOCTYPE html>`, `<html>`, `<head>`, and `<body>`).
+
+2. In the `<head>` section, link the necessary CSS file using the `<link>` tag, or you can include the CSS code directly within `<style>` tags.
+
+3. Inside the `<body>` section, create a `<div>` element to serve as the container for your student details table.
+
+4. Within the table container, create an HTML table structure using the `<table>`, `<thead>`, `<tbody>`, and `<tr>` tags.
+
+5. Add table headers (`<th>`) to represent the different columns of student details. Add table rows (`<tr>`) and table data (`<td>`) to populate the student information.
+
+6. Apply CSS styles to create the desired appearance for the student details table. Use appropriate CSS properties to control the layout, typography, colors, and spacing.
+
+7. Use CSS media queries to handle the table's display on different screen sizes. Define breakpoints where the table layout or styles need to change to ensure proper visibility of information. Adjust the styles within the media queries to achieve the desired responsive behavior.
+
+Here's an example of the HTML structure and CSS code to get you started:
+
+HTML: -->
+<!-- ```html -->
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>001</td>
+        <td>John Doe</td>
+        <td>18</td>
+        <td>12</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+</div>
+```
+
+CSS:
+```css
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #dddddd;
+}
+
+th {
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: scroll;
+  }
+}
+```
+
+<!-- In this example, the table is wrapped inside a `<div>` container with the class `.table-container`. The container has `max-width: 100%` and `overflow-x: auto` to allow horizontal scrolling on small screens when needed. The table itself has `width: 100%` to fill the available space. The table headers (`<th>`) and table cells (`<td>`) have appropriate padding, text alignment, and border styles. Within the media query targeting screens with a maximum width of 768 pixels, the `.table-container` overrides the `overflow-x` property to `scroll`, enabling horizontal scrolling on smaller screens.
+
+Please note that the CSS code provided is a starting point, and you may need to adjust the styles, colors, fonts, and layout based on your specific design requirements.
+
+Remember to incorporate these styles into your existing CSS file or create a separate file and link it in your HTML.
+
+By utilizing CSS and media queries, you can create a responsive student details table that adapts to different screen sizes, ensuring proper visibility and allowing for scrolling when needed, as shown in the attached images. -->

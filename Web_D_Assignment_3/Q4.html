@@ -1,0 +1,46 @@
+<!-- Q.4 What is the purpose of using Media Queries for Print Media? -->
+
+
+
+<!-- The purpose of using media queries for print media is to define specific styles and layout adjustments that should be applied when a webpage is printed. Media queries allow you to target the print media type and specify CSS rules that optimize the printed output, ensuring that the content is presented in a readable and printable format.
+
+Here are a few common use cases and purposes of using media queries for print media:
+
+1. **Optimizing Layout:** Media queries for print media enable you to modify the layout of a webpage to better suit the characteristics of printed materials. This may involve adjusting margins, removing unnecessary elements (such as navigation menus or interactive components), and repositioning or resizing content to fit the printed page.
+
+2. **Hiding or Modifying Styles:** Media queries allow you to selectively hide or modify certain styles that are not relevant or desirable for print. For example, you can remove background colors, modify font sizes or colors, and apply specific styles for links or headings to improve readability when printed.
+
+3. **Page Break Control:** With media queries, you can control where page breaks occur in the printed output. This can be useful for ensuring that content flows naturally and avoids awkward page breaks, especially for multi-page documents.
+
+4. **Header and Footer Customization:** Media queries for print media also enable you to customize the header and footer sections of printed pages. You can include additional information such as page numbers, document titles, dates, or any other relevant details specific to printed materials.
+
+Here's an example of a media query targeting print media and modifying some styles for printing:
+
+```css
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  /* Hide or modify specific elements */
+  .navigation {
+    display: none;
+  }
+  
+  /* Custom header and footer styles */
+  @page {
+    @top-left {
+      content: "My Document";
+    }
+    
+    @bottom-center {
+      content: counter(page);
+    }
+  }
+}
+```
+
+In this example, the CSS rules within the `@media print` media query block will only apply when the webpage is printed. The styles adjust the font size and line height for improved readability, hide the navigation element, and customize the header and footer with specific content.
+
+By using media queries for print media, you can ensure that your web content is presented in a well-optimized and readable format when users decide to print it, enhancing the overall user experience and making it more convenient to consume printed versions of your webpages. -->

@@ -1,0 +1,50 @@
+<!-- To achieve this, you can follow these steps:
+
+1. Set up the basic HTML structure of your webpage by creating an HTML file and adding the necessary HTML tags (`<!DOCTYPE html>`, `<html>`, `<head>`, and `<body>`).
+
+2. In the `<head>` section, link the necessary CSS file using the `<link>` tag, or you can include the CSS code directly within `<style>` tags.
+
+3. Inside the `<body>` section, create a `<div>` element with a class or ID to serve as the container for your information section.
+
+4. Within the information section container, add the relevant content such as headings, paragraphs, images, etc.
+
+5. Apply CSS styles to create the desired appearance for the information section in both dark and light modes.
+
+6. Use CSS media queries to define breakpoints and adjust the styles based on the screen size. You can target different screen sizes using the `max-width` or `min-width` media features. For example, you can define a breakpoint at 768 pixels and below for small devices.
+
+7. Within the media queries, modify the styles to switch between dark and light modes. You can use CSS properties like `background-color`, `color`, `border-color`, etc., to achieve the desired visual effects.
+
+Here's an example of the HTML structure and CSS code to implement this:
+
+HTML:
+```html -->
+<div class="information-section">
+  <h2>About OneCard</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod pretium ultrices. Sed viverra sapien sit amet eleifend sagittis.</p>
+  <!-- Add more content as needed -->
+</div>
+```
+
+CSS:
+```css
+.information-section {
+  background-color: #F5F5F5;
+  color: #333333;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .information-section {
+    background-color: #333333;
+    color: #F5F5F5;
+  }
+}
+```
+/* 
+In this example, the `.information-section` class represents the container for the information section. The initial styles are applied with a light mode background color (`#F5F5F5`) and dark text color (`#333333`). Within the media query targeting screens with a maximum width of 768 pixels, the styles are modified to switch to a dark mode background color (`#333333`) and light text color (`#F5F5F5`).
+
+You can modify the CSS code and add more styles to match the design and appearance of your reference images. Make sure to adjust the media query breakpoints and apply the appropriate styles accordingly.
+
+Remember to incorporate these styles into your existing CSS file or create a separate file and link it in your HTML.
+
+By utilizing CSS media queries, you can create different modes (dark and light) for your information section based on screen size, enhancing the visual experience for users on different devices. */
