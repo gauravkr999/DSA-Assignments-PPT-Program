@@ -1,0 +1,28 @@
+<!-- Q.3 Difference between var & let? -->
+
+
+
+
+<!-- In JavaScript, `var` and `let` are used for variable declarations, but they have some important differences in terms of scoping and behavior. Here are the main differences between `var` and `let`:
+
+1. Scope:
+   - `var`: Variables declared with `var` have function scope or global scope. This means that they are accessible throughout the entire function in which they are declared or in the global scope if declared outside of any function.
+   - `let`: Variables declared with `let` have block scope. They are only accessible within the block of code where they are declared, such as inside a loop, conditional statement, or block enclosed by curly braces `{}`.
+
+2. Hoisting:
+   - `var`: Variables declared with `var` are hoisted to the top of their scope during the compilation phase, which means that you can access them before they are actually declared. However, they are initialized with a default value of `undefined` until the assignment is made.
+   - `let`: Variables declared with `let` are also hoisted to the top of their scope, but they remain in the Temporal Dead Zone (TDZ) until the actual declaration. Accessing a `let` variable before its declaration in the code results in a `ReferenceError`.
+
+3. Re-declaration:
+   - `var`: Variables declared with `var` can be re-declared multiple times within the same scope without throwing an error. The subsequent declarations override the previous ones.
+   - `let`: Variables declared with `let` cannot be re-declared within the same scope. If you try to re-declare a `let` variable, it will throw a `SyntaxError`.
+
+4. Variable updates:
+   - `var`: Variables declared with `var` can be updated and reassigned within their scope.
+   - `let`: Variables declared with `let` can also be updated and reassigned within their scope.
+
+5. Block scoping:
+   - `var`: `var` variables do not have block scope. They are accessible outside of block statements, such as loops or conditionals, if they are defined within a function.
+   - `let`: `let` variables have block scope, meaning they are limited to the block of code where they are defined. They are not accessible outside of that block.
+
+The introduction of `let` in ES6 (ECMAScript 2015) was aimed at addressing some of the pitfalls and inconsistencies associated with `var`. It promotes better scoping practices and helps prevent issues like variable hoisting and accidental re-declaration. Therefore, it's generally recommended to use `let` (or `const` for immutable values) instead of `var` for variable declarations in modern JavaScript. -->

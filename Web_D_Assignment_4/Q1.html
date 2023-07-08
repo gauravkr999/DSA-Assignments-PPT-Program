@@ -1,0 +1,54 @@
+<!-- Q.1 Explain Hoisting in JavaScript -->
+
+
+
+
+
+<!-- Hoisting is a JavaScript mechanism that allows variables and function declarations to be moved to the top of their containing scope during the compilation phase, before the code is executed. This means that regardless of where variables and functions are declared in the code, they are treated as if they were declared at the top of their scope.
+
+There are two types of hoisting: variable hoisting and function hoisting.
+
+1. Variable Hoisting:
+   When variables are hoisted, the JavaScript engine allocates memory for them during the compilation phase and sets them to `undefined`. This allows you to access variables before they are actually declared in the code.
+
+   For example:
+   ```javascript
+   console.log(x); // undefined
+   var x = 5;
+   ```
+
+   In the above example, even though `x` is accessed before it is declared, it does not result in an error. During hoisting, the declaration of `var x` is moved to the top of its scope, so the code behaves as if it were written like this:
+
+   ```javascript
+   var x;
+   console.log(x); // undefined
+   x = 5;
+   ```
+
+   It's important to note that only the variable declaration is hoisted, not the assignment. So, while you can access the variable before it is declared, the value assigned to it will still be `undefined` until the assignment statement is executed.
+
+2. Function Hoisting:
+   Function declarations are also hoisted in JavaScript. This means that you can call a function before it appears in the code.
+
+   For example:
+   ```javascript
+   foo(); // "Hello, World!"
+
+   function foo() {
+     console.log("Hello, World!");
+   }
+   ```
+
+   In the above example, the function `foo` is called before its declaration, but it still works because the function declaration is hoisted to the top of its scope. The code is interpreted as if it were written like this:
+
+   ```javascript
+   function foo() {
+     console.log("Hello, World!");
+   }
+
+   foo(); // "Hello, World!"
+   ```
+
+   It's important to note that function expressions, such as anonymous functions assigned to variables, are not hoisted. Only function declarations are hoisted.
+
+Hoisting can sometimes lead to unexpected behavior and bugs if not understood properly. Therefore, it's considered a best practice to declare variables and functions at the top of their respective scopes to make the code more readable and avoid any confusion related to hoisting. -->

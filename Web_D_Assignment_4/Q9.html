@@ -1,0 +1,47 @@
+<!-- Q.9 How can you define default parameter values in ES6 functions? -->
+
+
+
+
+
+<!-- In ECMAScript 6 (ES6), you can define default parameter values for function parameters. Default parameter values allow you to specify a fallback value that is used when an argument is not provided or is `undefined`. Here's how you can define default parameter values in ES6 functions:
+
+```javascript
+function greet(name = 'Anonymous') {
+  console.log(`Hello, ${name}!`);
+}
+
+greet(); // Output: Hello, Anonymous!
+greet('John'); // Output: Hello, John!
+```
+
+In the example above, the `greet()` function has a parameter called `name` with a default value of `'Anonymous'`. If no argument is provided when calling the function, or if the argument is `undefined`, the default value `'Anonymous'` is used instead. When the function is called with the argument `'John'`, the provided argument takes precedence over the default value.
+
+You can define default values for multiple parameters in a function:
+
+```javascript
+function addNumbers(a, b = 0, c = 0) {
+  return a + b + c;
+}
+
+console.log(addNumbers(5)); // Output: 5
+console.log(addNumbers(5, 10)); // Output: 15
+console.log(addNumbers(5, 10, 15)); // Output: 30
+```
+
+In the `addNumbers()` function, the parameters `b` and `c` have default values of `0`. If these arguments are not provided or are `undefined`, the default values are used. The function can be called with any combination of arguments, and missing arguments will default to `0`.
+
+It's worth noting that default parameter values are evaluated at the time the function is called. This means that the default value expressions can be more complex, involving function calls or operations.
+
+```javascript
+function calculateArea(width, height = width * 2) {
+  return width * height;
+}
+
+console.log(calculateArea(5)); // Output: 50
+console.log(calculateArea(5, 10)); // Output: 50
+```
+
+In the `calculateArea()` function, the `height` parameter has a default value of `width * 2`. When the `width` argument is provided, the default value expression is evaluated using the provided value.
+
+Default parameter values in ES6 functions provide a convenient way to handle missing or `undefined` arguments, reducing the need for explicit checks and improving the readability of the code. -->

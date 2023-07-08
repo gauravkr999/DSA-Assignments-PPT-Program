@@ -1,0 +1,59 @@
+<!-- Q.6  What is template literals in ES6 and how do you use them? -->
+
+
+
+
+
+<!-- Template literals, introduced in ECMAScript 6 (ES6), are a convenient way to work with strings in JavaScript. They allow for the embedding of expressions and multiline strings using a more expressive syntax.
+
+Template literals are defined using backticks (` `) instead of single or double quotes. Within template literals, you can include placeholders `${expression}` that are replaced with the evaluated value of the expression.
+
+Here's an example that demonstrates the basic usage of template literals:
+
+```javascript
+const name = 'John';
+const age = 30;
+
+const message = `My name is ${name} and I'm ${age} years old.`;
+console.log(message);
+```
+
+In the above example, the template literal is defined using backticks. The placeholders `${name}` and `${age}` are expressions that will be replaced with the actual values of the variables when the template literal is evaluated. The resulting string will be:
+
+```
+My name is John and I'm 30 years old.
+```
+
+Template literals offer several advantages and features:
+
+1. Multiline strings: Template literals support multiline strings without the need for concatenation or escape characters. You can simply include line breaks within the template literal.
+
+```javascript
+const message = `
+  This is a multiline string.
+  It can span across multiple lines.
+`;
+```
+
+2. Expression evaluation: Inside template literals, you can include any valid JavaScript expression within `${}` placeholders. The expression is evaluated and the result is inserted into the string.
+
+```javascript
+const a = 5;
+const b = 10;
+const sum = `The sum of ${a} and ${b} is ${a + b}.`;
+```
+
+3. Nested template literals: Template literals can be nested within each other, allowing for more complex string compositions.
+
+```javascript
+const name = 'John';
+const greeting = `Hello, ${`Mr. ${name}`}!`;
+```
+
+4. Raw string access: By using the special syntax `${variableName.raw}`, you can access the raw, unprocessed form of the template literal. This can be useful for scenarios where you need to work with escape characters or special characters.
+
+```javascript
+const path = String.raw`C:\Program Files\MyApp`;
+```
+
+Template literals provide a more concise and flexible way to work with strings in JavaScript, allowing for easier string interpolation, multiline strings, and expression evaluation. They are widely used in modern JavaScript development for generating dynamic strings, HTML templates, and more. -->

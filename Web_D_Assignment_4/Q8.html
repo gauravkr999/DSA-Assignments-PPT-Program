@@ -1,0 +1,72 @@
+<!-- Q.8 How can you destructure objects and arrays in ES6? -->
+
+
+
+
+
+<!-- Destructuring is a feature introduced in ECMAScript 6 (ES6) that allows you to extract values from objects and arrays and assign them to individual variables. It provides a concise and convenient way to access and use specific elements of complex data structures. Here's how you can destructure objects and arrays in ES6:
+
+1. Destructuring Objects:
+   To destructure an object, you use curly braces `{}` and specify the variable names that match the object's property names.
+
+   Example:
+   ```javascript
+   const person = {
+     name: 'John',
+     age: 30,
+     city: 'New York'
+   };
+
+   // Destructuring object properties
+   const { name, age, city } = person;
+
+   console.log(name); // 'John'
+   console.log(age); // 30
+   console.log(city); // 'New York'
+   ```
+
+   You can also assign a different variable name by using the syntax `property: variable`.
+
+   Example:
+   ```javascript
+   const { name: personName, age: personAge } = person;
+
+   console.log(personName); // 'John'
+   console.log(personAge); // 30
+   ```
+
+2. Destructuring Arrays:
+   To destructure an array, you use square brackets `[]` and specify the variable names to which you want to assign the array elements. The assignment is based on the order of elements in the array.
+
+   Example:
+   ```javascript
+   const numbers = [1, 2, 3];
+
+   // Destructuring array elements
+   const [first, second, third] = numbers;
+
+   console.log(first); // 1
+   console.log(second); // 2
+   console.log(third); // 3
+   ```
+
+   You can also skip elements by leaving empty commas.
+
+   Example:
+   ```javascript
+   const [, , third] = numbers;
+
+   console.log(third); // 3
+   ```
+
+   Additionally, you can use the rest operator (`...`) to capture remaining elements into a new array.
+
+   Example:
+   ```javascript
+   const [first, ...rest] = numbers;
+
+   console.log(first); // 1
+   console.log(rest); // [2, 3]
+   ```
+
+Destructuring can also be combined for nested objects or arrays, allowing you to access deeply nested values with ease. It is a powerful tool that simplifies working with complex data structures and enhances code readability. -->
