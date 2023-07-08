@@ -1,0 +1,57 @@
+<!-- Q.10 What’s Super Keyword & What it does? -->
+
+
+
+
+
+<!-- In JavaScript, the `super` keyword is used to call and access the parent class's constructor and methods from within a subclass. It is typically used within the constructor and methods of a subclass to refer to the corresponding constructor or method in the superclass.
+
+The `super` keyword has two main uses:
+
+1. Calling the parent class's constructor: When creating a subclass, the `super` keyword can be used in the constructor of the subclass to call the constructor of the superclass. This allows the subclass to inherit and initialize the properties defined in the superclass. It is necessary to call `super()` before accessing the `this` keyword within the constructor of the subclass. For example:
+
+```javascript
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name); // Calling the constructor of the parent class
+    this.breed = breed;
+  }
+}
+
+const myDog = new Dog('Buddy', 'Golden Retriever');
+console.log(myDog.name); // Output: Buddy
+console.log(myDog.breed); // Output: Golden Retriever
+```
+
+2. Accessing the parent class's methods: The `super` keyword can also be used to call and invoke methods defined in the parent class from within a subclass. This allows the subclass to extend or override the behavior defined in the superclass while still having access to the parent class's methods. For example:
+
+```javascript
+class Animal {
+  makeSound() {
+    console.log('Animal makes a sound');
+  }
+}
+
+class Dog extends Animal {
+  makeSound() {
+    super.makeSound(); // Calling the method of the parent class
+    console.log('Dog barks');
+  }
+}
+
+const myDog = new Dog();
+myDog.makeSound();
+// Output:
+// Animal makes a sound
+// Dog barks
+```
+
+In the example above, the `makeSound()` method in the `Dog` subclass first calls the `makeSound()` method of the parent `Animal` class using `super.makeSound()`. It then adds additional behavior specific to the `Dog` class.
+
+The `super` keyword provides a way to access and utilize the functionality of the parent class within a subclass. It enables inheritance and allows for extending or overriding behaviors defined in the superclass, providing flexibility and code reuse in object-oriented JavaScript programming. -->

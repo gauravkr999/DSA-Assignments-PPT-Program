@@ -1,0 +1,45 @@
+<!-- Q.9 Explain Class in JavaScript? -->
+
+
+
+
+
+
+<!-- In JavaScript, a class is a blueprint or a template for creating objects with similar properties and behaviors. It provides a way to define the structure and behavior of objects, including their properties (data) and methods (functions). Classes in JavaScript are introduced in ECMAScript 2015 (ES6) as syntactical sugar over the existing prototype-based inheritance model.
+
+To define a class in JavaScript, you use the `class` keyword followed by the name of the class. Here's a basic example of a class definition:
+
+```javascript
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  calculateArea() {
+    return this.width * this.height;
+  }
+}
+```
+
+In the above example, the `Rectangle` class has a constructor method that is called when an object is created from the class. The constructor initializes the `width` and `height` properties of the object. The class also has a `calculateArea()` method that calculates and returns the area of the rectangle.
+
+To create an object (an instance) from a class, you use the `new` keyword followed by the class name and any necessary arguments for the constructor. Here's an example of creating an object from the `Rectangle` class:
+
+```javascript
+const rectangle = new Rectangle(5, 10);
+```
+
+The `rectangle` object is an instance of the `Rectangle` class, and it has its own `width` and `height` properties set to `5` and `10`, respectively. You can then access the object's properties and invoke its methods:
+
+```javascript
+console.log(rectangle.width); // Output: 5
+console.log(rectangle.height); // Output: 10
+console.log(rectangle.calculateArea()); // Output: 50
+```
+
+JavaScript classes also support inheritance, where one class can inherit properties and methods from another class using the `extends` keyword. This allows for creating hierarchical relationships between classes.
+
+It's important to note that JavaScript classes are primarily syntactic sugar over the existing prototype-based inheritance system. Under the hood, classes are still implemented using prototypes and prototypal inheritance.
+
+JavaScript classes provide a more familiar syntax and a convenient way to define and create objects with shared properties and behaviors. They promote code organization, modularity, and object-oriented programming principles in JavaScript. -->
