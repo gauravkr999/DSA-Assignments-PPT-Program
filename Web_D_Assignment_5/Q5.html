@@ -1,0 +1,49 @@
+<!-- Q.5 What are Callbacks &  Callback Hell ? -->
+
+
+
+
+
+
+<!-- Callbacks are functions that are passed as arguments to other functions and are executed at a later point in time, often after an asynchronous operation completes. Callbacks allow you to define the behavior that should occur once the asynchronous operation is finished.
+
+Here's an example of using a callback:
+
+```javascript
+function fetchData(callback) {
+  setTimeout(function() {
+    var data = 'Some data';
+    callback(data); // Call the callback with the result
+  }, 2000);
+}
+
+function handleData(data) {
+  console.log('Data:', data);
+}
+
+fetchData(handleData);
+```
+
+In this example, the `fetchData` function takes a callback function as an argument. After a delay of 2000 milliseconds (2 seconds), it invokes the callback function with the retrieved data.
+
+Callback Hell, also known as the Pyramid of Doom, is a term used to describe the situation when multiple nested callbacks are used, leading to code that is difficult to read, understand, and maintain. It arises when asynchronous operations are chained together or when callbacks depend on the results of other callbacks, resulting in deeply nested code structures.
+
+Here's an example of callback hell:
+
+```javascript
+asyncOperation1(function(result1) {
+  asyncOperation2(result1, function(result2) {
+    asyncOperation3(result2, function(result3) {
+      asyncOperation4(result3, function(result4) {
+        // More nested callbacks...
+      });
+    });
+  });
+});
+```
+
+In this example, each callback function relies on the result of the previous operation, resulting in a deeply nested structure that becomes harder to follow and reason about as the number of asynchronous operations grows.
+
+Callback hell can make code difficult to debug, maintain, and extend. It leads to code that is hard to read and can introduce errors, especially when error handling is involved.
+
+To alleviate the problem of callback hell, various patterns and techniques have been developed over time. These include using named functions, modularizing code, using control flow libraries (such as async.js or Promises), and more recently, utilizing async/await syntax, which provides a more readable and sequential approach to handling asynchronous operations. -->

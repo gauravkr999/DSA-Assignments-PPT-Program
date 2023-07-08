@@ -1,0 +1,39 @@
+<!-- Q.8 Explain Purpose of Try and Catch Block & Why do we need it? -->
+
+
+
+
+
+
+<!-- The purpose of the `try` and `catch` block is to handle and manage exceptions or errors that may occur during the execution of a block of code. The `try` block contains the code that is potentially prone to throwing an exception, while the `catch` block is responsible for catching and handling any exceptions that are thrown within the `try` block.
+
+Here's why we need `try` and `catch` blocks:
+
+1. **Error Handling**: Exceptions or errors can occur during the execution of a program due to various reasons, such as invalid input, network issues, or programming mistakes. By using `try` and `catch`, you can anticipate and handle these errors in a controlled manner. The `catch` block allows you to define the actions to be taken when a specific type of error occurs, providing an opportunity for graceful recovery or appropriate error messaging.
+
+2. **Prevent Program Crashes**: Without error handling, if an exception occurs during the execution of a program and is not caught and handled, it can lead to a program crash or unexpected termination. By using `try` and `catch`, you can intercept the exception, prevent the program from crashing, and gracefully handle the error to continue program execution or perform necessary cleanup.
+
+3. **Debugging and Logging**: The `catch` block allows you to capture and log error information, such as the error message, stack trace, or additional context. This information is valuable for debugging and troubleshooting purposes. It helps in identifying the cause of the error, understanding the flow of execution, and resolving issues more effectively.
+
+4. **Control Flow**: `try` and `catch` blocks also provide control flow in handling exceptions. You can have multiple `catch` blocks to handle different types of exceptions separately. This allows you to have different error-handling logic based on the specific type of exception thrown, enabling fine-grained error management.
+
+Here's an example that demonstrates the use of `try` and `catch`:
+
+```javascript
+function divide(a, b) {
+  try {
+    if (b === 0) {
+      throw new Error('Division by zero is not allowed');
+    }
+    return a / b;
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+}
+
+console.log(divide(10, 0));
+```
+
+In this example, the `divide` function attempts to perform a division operation. If the divisor (`b`) is zero, it throws an error using `throw new Error()`. The `try` block encompasses the potentially problematic code, and the `catch` block handles the exception by logging an error message.
+
+By utilizing `try` and `catch`, you can effectively handle errors, prevent program crashes, and ensure more robust and reliable code execution. -->

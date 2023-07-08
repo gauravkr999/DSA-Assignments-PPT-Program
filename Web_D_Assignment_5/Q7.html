@@ -1,0 +1,61 @@
+<!-- Q.7 What’s async & await Keyword in JavaScript -->
+
+
+
+
+
+
+<!-- The `async` and `await` keywords are part of the JavaScript language introduced in ECMAScript 2017 (ES8). They provide a more concise and readable way to write and handle asynchronous code, making it appear more like traditional synchronous code.
+
+Here's an explanation of the `async` and `await` keywords:
+
+1. **async**: The `async` keyword is used to define an asynchronous function. An asynchronous function always returns a promise, and the `async` keyword allows you to write asynchronous code in a more sequential and synchronous-like manner.
+
+```javascript
+async function fetchData() {
+  // Asynchronous code
+}
+```
+
+In this example, the `fetchData` function is defined as an asynchronous function using the `async` keyword.
+
+2. **await**: The `await` keyword is used inside an async function to pause the execution and wait for a promise to resolve. It can only be used inside an async function, and it allows you to write code that looks like traditional synchronous code, even though it's asynchronous under the hood.
+
+```javascript
+async function getData() {
+  const result = await fetchData();
+  // Code after await
+}
+```
+
+In this example, the `await` keyword is used to pause the execution of the `getData` function until the promise returned by `fetchData` is resolved. The resolved value of the promise is stored in the `result` variable, and the code after the `await` statement is executed.
+
+The `await` keyword can be used with any expression that returns a promise, not just with functions. It allows you to handle promises in a more linear and readable way, avoiding the need for explicit callbacks or chaining `.then()` methods.
+
+Here's an example with error handling using `try/catch`:
+
+```javascript
+async function fetchData() {
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
+      // Simulating an error
+      reject(new Error('Something went wrong'));
+    }, 2000);
+  });
+}
+
+async function handleData() {
+  try {
+    const data = await fetchData();
+    console.log('Data:', data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+handleData();
+```
+
+In this example, the `handleData` function uses `await` to pause the execution until the promise returned by `fetchData` is resolved or rejected. If an error occurs, it is caught in the `catch` block and handled appropriately.
+
+The combination of `async` and `await` provides a more readable and structured way to write and handle asynchronous code, making it easier to reason about and maintain. -->
