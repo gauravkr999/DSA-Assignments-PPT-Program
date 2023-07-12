@@ -1,0 +1,62 @@
+<!-- Q.7 Explain Prop Drilling in React & Ways to avoid it -->
+
+
+
+
+
+<!-- Prop drilling in React refers to the situation where props are passed through multiple layers of components that don't need the props directly, leading to unnecessary complexity and code verbosity. It occurs when intermediate components need to pass props down to deeply nested components that actually require the props for their functionality.
+
+Here's an example to illustrate prop drilling: -->
+
+
+
+// Parent component
+function Parent() {
+  const data = { name: 'John', age: 25 };
+  return (
+    <div>
+      <Child1 data={data} />
+    </div>
+  );
+}
+
+// Child1 component
+function Child1({ data }) {
+  return (
+    <div>
+      <Child2 data={data} />
+    </div>
+  );
+}
+
+// Child2 component
+function Child2({ data }) {
+  return (
+    <div>
+      <Child3 data={data} />
+    </div>
+  );
+}
+
+// Child3 component - finally using the data
+function Child3({ data }) {
+  return <div>{data.name}</div>;
+}
+
+
+
+<!-- In this example, the data prop is passed down from the Parent component to Child1, then to Child2, and finally to Child3. However, Child1 and Child2 don't actually need the data prop for their functionality, and they simply forward it to the next component, resulting in unnecessary prop drilling.
+
+To avoid prop drilling and keep the codebase clean, there are several approaches you can consider:
+
+Context API: Use React's Context API to provide the required data to the deeply nested components without explicitly passing it through intermediate components. This allows components to consume the data directly without prop drilling.
+
+Redux or other state management libraries: Implement a state management solution like Redux, MobX, or Zustand. These libraries provide a global state that can be accessed by any component in the application, eliminating the need for prop drilling.
+
+Custom hooks: Create custom hooks to encapsulate the logic for accessing shared data or functionality. Custom hooks can centralize the management of data or state, making it accessible to any component that needs it, regardless of their hierarchy.
+
+Component composition: Instead of passing props through intermediate components, you can compose components together in a different structure where the required props are directly passed to the components that need them. This promotes a flatter component hierarchy and reduces the need for excessive prop drilling.
+
+Higher-order components (HOCs) or Render Props: Use higher-order components or render props pattern to wrap components and inject the necessary props, avoiding the need for prop drilling. HOCs and render props provide a way to share common functionality or data between components without explicitly passing props down the component tree.
+
+By adopting these techniques, you can effectively avoid prop drilling and ensure that the necessary data or functionality is available to the components that need it, without cluttering the component hierarchy with unnecessary props.-->

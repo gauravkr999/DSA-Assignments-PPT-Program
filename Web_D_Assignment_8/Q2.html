@@ -1,0 +1,14 @@
+<!-- Q.2 What do you understand by Virtual Dom? -->
+
+
+
+
+<!-- The Virtual DOM (Document Object Model) is a concept used by React and other JavaScript libraries/frameworks to optimize the performance of web applications. The DOM is a programming interface for HTML and XML documents, representing the structure of a web page. Traditionally, when changes are made to the data or state of a web application, the entire DOM is updated and re-rendered, which can be inefficient and slow.
+
+The Virtual DOM is a lightweight copy or representation of the actual DOM. When changes occur in a React application, React first updates the Virtual DOM instead of the actual DOM. It then compares the updated Virtual DOM with the previous version to determine the minimal set of changes needed to be applied to the actual DOM.
+
+This diffing process, where React compares the old and new Virtual DOMs to find the differences, is more efficient than directly manipulating the entire DOM. Once React identifies the specific changes required, it applies those changes only to the relevant parts of the actual DOM, resulting in optimized rendering and improved performance.
+
+The use of a Virtual DOM allows React to minimize expensive DOM operations, such as accessing and modifying elements, which can be computationally expensive. Instead, React applies changes in a batched manner and performs updates in a more optimized way. This approach helps to reduce the number of actual DOM manipulations, leading to faster rendering and better user experience.
+
+It's important to note that the Virtual DOM is an internal implementation detail of React and not a part of the official web standards. It is a technique used by React to optimize rendering, but it is transparent to developers who use React. They interact with React components and let the framework handle the Virtual DOM updates efficiently behind the scenes. -->

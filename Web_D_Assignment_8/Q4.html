@@ -1,0 +1,42 @@
+<!-- Q.4 Whats component? Types of component
+
+
+
+
+
+
+
+In the context of React and other component-based frameworks, a component is a reusable and self-contained building block that encapsulates a specific part of a user interface. Components can be thought of as individual, modular units that combine HTML, CSS, and JavaScript logic to define a specific functionality or visual element within an application.
+
+There are several types of components in React:
+
+1. Functional Components:
+   - Functional components, also known as stateless components, are defined as JavaScript functions.
+   - They accept props (properties) as inputs and return JSX (JavaScript XML) to describe the component's structure and content.
+   - Functional components are simpler and more lightweight compared to class components.
+   - They are typically used for presentational purposes, without maintaining any internal state or lifecycle methods.
+
+2. Class Components:
+   - Class components are defined as ES6 classes that extend the base React.Component class.
+   - They have a render() method that returns JSX to define the component's structure and content.
+   - Class components can have additional methods and maintain internal state using the this.state object.
+   - They can also implement lifecycle methods, such as componentDidMount() or componentDidUpdate(), to handle component lifecycle events.
+
+3. Pure Components:
+   - Pure components are an optimization in React that are primarily used for performance improvements.
+   - They are similar to functional components but come with a built-in shallow prop and state comparison mechanism.
+   - Pure components automatically perform a shallow comparison of props and state to determine if a re-render is necessary. If there are no changes, the component does not re-render, resulting in performance optimizations.
+   - Pure components are suitable when the component's output is solely determined by its props and state, and no complex data or nested objects need to be compared.
+
+4. Higher-Order Components (HOCs):
+   - Higher-Order Components are functions that take a component as input and return an enhanced version of that component.
+   - HOCs allow for code reuse and provide additional functionality to components, such as logging, authentication, or data fetching.
+   - They enable cross-cutting concerns by separating generic functionality from specific component implementations.
+   - HOCs are not specific to React but are commonly used in React applications.
+
+5. Render Props Components:
+   - Render props is a technique used in React where a component accepts a function as a prop, known as the render prop.
+   - The component then invokes this render prop and passes data or functionality to the child components.
+   - This pattern allows for more flexible component composition and code reuse by providing a mechanism to share logic or data between components.
+
+These are the most common types of components in React, each serving a specific purpose and offering different capabilities for building modular and reusable UIs. The choice of component type depends on the requirements and complexity of the application. -->

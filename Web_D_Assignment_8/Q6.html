@@ -1,0 +1,36 @@
+<!-- Q.6 Explain react component life cycle  -->
+
+
+
+
+
+<!-- In React, component lifecycle refers to the series of phases a component goes through from its creation to its removal from the DOM. Each phase of the component lifecycle offers different methods that can be overridden to perform certain actions and handle specific events. However, with the introduction of React Hooks, the traditional class-based lifecycle methods have been partially replaced by equivalent Hooks for function components. Here's an overview of the React component lifecycle:
+
+1. Mounting Phase:
+   - `constructor()`: This is the first method called when a component is created. It is used for initializing state and binding event handlers.
+   - `static getDerivedStateFromProps()`: This method is rarely used but can be used to update the component's state based on changes in props before rendering.
+   - `render()`: This method is responsible for rendering JSX or null. It should be a pure function without causing side effects.
+   - `componentDidMount()`: This method is called immediately after the component is mounted in the DOM. It is commonly used for initialization, data fetching, or starting subscriptions.
+
+2. Updating Phase:
+   - `static getDerivedStateFromProps()`: Similar to the mounting phase, this method can be used to update the component's state based on changes in props.
+   - `shouldComponentUpdate()`: This method allows you to control if the component should re-render or not. By default, it returns true.
+   - `render()`: Re-renders the component with updated props and state.
+   - `getSnapshotBeforeUpdate()`: This method is rarely used but can be used to capture information from the DOM before it updates.
+   - `componentDidUpdate()`: This method is called after the component is re-rendered. It is commonly used for side effects, like fetching updated data based on props changes.
+
+3. Unmounting Phase:
+   - `componentWillUnmount()`: This method is called just before the component is unmounted and removed from the DOM. It is used to clean up resources such as event listeners or subscriptions.
+
+4. Error Handling Phase:
+   - `static getDerivedStateFromError()`: This method is used to handle errors during rendering and update the component's state accordingly.
+   - `componentDidCatch()`: This method is called when an error occurs in a child component. It is used to perform error logging or display fallback UI.
+
+The above lifecycle methods are applicable to class components. For function components, React Hooks are used to achieve similar functionality:
+
+- `useState()`: This Hook is used to add local state to function components.
+- `useEffect()`: This Hook is used for side effects and subscribing to data sources. It replaces `componentDidMount()`, `componentDidUpdate()`, and `componentWillUnmount()`.
+- `useContext()`: This Hook is used to access the value of a context.
+- Other Hooks like `useReducer()`, `useCallback()`, `useMemo()`, etc., provide additional functionality for managing state and optimizing function components.
+
+It's important to note that with the introduction of React Hooks, the traditional class-based lifecycle methods are being deprecated in favor of the more flexible and concise functional approach. -->
