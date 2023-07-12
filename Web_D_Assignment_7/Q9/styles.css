@@ -1,0 +1,43 @@
+/* ...Existing CSS code... */
+
+.completed {
+    background-color: #f2f2f2;
+}
+
+.update-status-btn,
+.delete-todo-btn {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.update-status-btn:hover,
+.delete-todo-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+
+/* 
+In this updated code, two new functions createUpdateStatusButton() and createDeleteTodoButton() are added to create the "Update Status" and "Delete Todo" buttons dynamically for each task.
+
+The createUpdateStatusButton() function creates a button element with the text "Update Status". It adds a click event listener to toggle the completed class on the parent <li> element, changing the background color to indicate the updated status.
+
+The createDeleteTodoButton() function creates a button element with the text "Delete Todo". It adds a click event listener to remove the parent <li> element from the task list.
+
+The CSS code is updated to style the "Update Status" and "Delete Todo" buttons. The .completed class is defined to change the background color of completed tasks.
+
+Now, when you add a task, the "Update Status" and "Delete Todo" buttons will be created for each task. Clicking the "Update Status" button will toggle the completed class and change the background color. Clicking the "Delete Todo" button will remove the corresponding task from the UI.
+
+Remember to update the styling in the CSS file (styles.css) to match the desired layout and design. */
+
+
+
+
+
+

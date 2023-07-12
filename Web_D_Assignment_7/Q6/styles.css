@@ -1,0 +1,40 @@
+/* ...Existing CSS code... */
+
+.product-details {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.product-details .product-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product-details .product-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-details .product-description {
+    margin-bottom: 20px;
+}
+
+.product-details .product-price {
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.product-details .back-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-details .back-btn:hover {
+    background-color: #45a049;
+}
