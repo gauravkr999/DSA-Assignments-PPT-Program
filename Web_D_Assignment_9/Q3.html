@@ -1,0 +1,74 @@
+<!-- Q.3 How to pass data from one component to another component -->
+
+
+
+
+
+<!-- In React, there are several ways to pass data from one component to another component. Here are some commonly used approaches:
+
+1. **Props**: You can pass data from a parent component to a child component using props. Props are essentially properties that you define on a component and pass values to when rendering the component. Here's an example:
+
+   ```jsx
+   // ParentComponent.jsx
+   import React from 'react';
+   import ChildComponent from './ChildComponent';
+
+   function ParentComponent() {
+     const data = 'Hello from Parent'; -->
+
+     return <ChildComponent data={data} />;
+   <!-- }
+
+   // ChildComponent.jsx
+   import React from 'react';
+
+   function ChildComponent(props) {
+     return <p>{props.data}</p>;
+   }
+   ```
+
+   In this example, the `data` variable is passed as a prop from the `ParentComponent` to the `ChildComponent` using the `data` prop. The `ChildComponent` can access and use the data through `props.data`.
+
+2. **Context**: React's Context API allows you to create a context and share data with multiple components in the component tree without passing props explicitly at each level. Context provides a way to share data implicitly between components. Here's an example:
+
+   ```jsx
+   // DataContext.js
+   import React from 'react';
+
+   const DataContext = React.createContext();
+
+   export default DataContext;
+
+   // ParentComponent.jsx
+   import React from 'react';
+   import ChildComponent from './ChildComponent';
+   import DataContext from './DataContext';
+
+   function ParentComponent() {
+     const data = 'Hello from Parent'; -->
+
+     return (
+       <DataContext.Provider value={data}>
+         <ChildComponent />
+       </DataContext.Provider>
+     <!-- );
+   }
+
+   // ChildComponent.jsx
+   import React from 'react';
+   import DataContext from './DataContext';
+
+   function ChildComponent() {
+     const data = React.useContext(DataContext);
+
+     return <p>{data}</p>;
+   }
+   ```
+
+   In this example, a `DataContext` is created using `React.createContext()`. The `data` value is provided as the value of the context provider. The `ChildComponent` can access the data using the `useContext` hook and `DataContext`.
+
+3. **State Management Libraries**: If you have complex state management needs or want to share data across different parts of your application, you can use state management libraries like Redux or MobX. These libraries provide a centralized store to manage application state and enable components to access and modify the shared data.
+
+   State management libraries typically involve creating a store, defining actions to update the state, and connecting components to the store to access the required data. The specifics of implementing state management depend on the library you choose.
+
+These are just a few approaches to pass data between components in React. The choice of method depends on the complexity of your application, the relationship between the components, and your specific requirements. -->

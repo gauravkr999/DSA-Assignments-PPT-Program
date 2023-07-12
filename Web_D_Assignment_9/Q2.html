@@ -1,0 +1,46 @@
+<!-- Q.2 Explain useState Hook & what can you achieve with it? -->
+
+
+
+
+
+<!-- The useState hook is one of the most commonly used hooks in React. It allows you to add state to functional components. State is used to store and manage data that can change over time, such as user input, component visibility, or API data.
+
+The useState hook takes an initial value as a parameter and returns an array with two elements: the current state value and a function to update that value. Here's the basic syntax of useState:
+
+```jsx
+const [state, setState] = useState(initialValue);
+```
+
+The `state` variable holds the current value of the state, and `setState` is a function you can call to update the state. React will re-render the component whenever the state is updated.
+
+With the useState hook, you can achieve the following:
+
+1. Manage component state: You can store and update state values within functional components, allowing you to keep track of dynamic data. For example, you can use useState to manage the value of an input field, the visibility of a modal, or the active tab in a tabbed interface.
+
+2. Trigger re-renders: When you call the `setState` function returned by useState, React will re-render the component with the updated state. This allows you to reflect changes in the UI based on the state value. React will optimize the re-renders, only updating the necessary parts of the component tree.
+
+3. Handle complex state: The state managed by useState doesn't have to be limited to primitive values. You can use objects or arrays as state values, allowing you to handle more complex data structures. To update complex state, you can use the `setState` function to provide a new value or use functional updates to update based on the previous state.
+
+Here's an example of using useState to manage a simple counter:
+
+```jsx
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  return ( -->
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  <!-- );
+}
+```
+
+In the above example, the `count` state is initialized with 0 using useState. The `setCount` function is used to update the count state when the button is clicked. The UI is re-rendered with the updated count value. -->
